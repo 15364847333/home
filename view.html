@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>评情页_PHP类库</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
@@ -37,6 +38,7 @@
           </div>
         </div>
         <div class="describe">
+          <pre>
           不知道学PHP有没有前途~哎越写越没劲
            Class createdb    //类的开始
            {
@@ -100,7 +102,7 @@
                  $str.="<p class='pageRemark'>共<b>" . $this->myde_page_count .
                          "</b>页<b>" . $this->myde_total . "</b>条数据</p>";
                  $str.="</div>";
-                 return $str;
+                 return $str; </pre>
              }
          }
 
@@ -248,7 +250,46 @@
       </div>
     </main>
     <footer>
-      <div class="content"><span>Copyright © 2018 快哥网络</span>   <span style="float: right;">意见反馈</span> </div>
+      <div class="content"><span>Copyright © 2018 快哥网络</span>   <span style="float: right;cursor: pointer;" id="feedback">意见反馈</span> </div>
+      <div class="m-layer" id="feedbackView">
+        <div class="zbar" id="">
+          <div class="zttl f-thide">意见反馈</div>
+        </div>
+        <div class="zcnt">
+          <div class="lyct f-cb">
+            <div class="m-fdback">
+              <div class="tip">任何产品中的问题，欢迎反馈给我们</div>
+              <div class="u-txtwrap f-pr">
+                <textarea class="u-txt area" placeholder="请输入反馈内容" id=""></textarea>
+                <span class="zs s-fc2" style="display: none;">0/140</span>
+              </div>
+              <div class="u-txtwrap f-pr holder-parent" style="display: block;">
+                <textarea class="u-txt contact" placeholder="请留下联系方式（电话、QQ、邮箱）" maxlength="100" id=""></textarea>
+              </div>
+              <div style="display:none" class="u-err" id="">
+                <i class="u-icn u-icn-25"></i>内容不能为空！</div>
+              </div>
+              <div class="lybtn f-tc">
+                <a href="javascript:;" class="btn2"  id="">
+                  <i>发送意见</i>
+                </a>
+                <a href="javascript:;" class="btn2 btnh btnm close"  id="">
+                  <i>取 消</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <span class="zcls close" title="关闭窗体" id="">×</span>
+        </div>
+        <script src="js/jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+          $("#feedback").click(function(event) {
+            $("#feedbackView").css("display","block");
+          });
+          $(".close").click(function(event) {
+            $(".m-layer").css("display","none");
+          });
+        </script>
     </footer>
   </body>
 </html>
