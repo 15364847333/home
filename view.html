@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>php分页类</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <div class="title">快哥网络</div>
+        <div class="search">
+          <input type="text" id="search">
+          <input type="submit" class="sub"  value="搜索">
+        </div>
+        <div class="login">
+          <!-- <span id="login">登陆</span>
+          <span id="register">注册</span> -->
+          <span id="login">程福红</span>
+          <span id="register">用户中心</span>
+        </div>
+        <div class="release">发布</div>
+      </div>
+    </header>
+    <main>
+      <div class="left">
+        <div class="content">
+          <div class="title">
+            <div class="text"><a href="view.html">php分页类</a></div>
+          </div>
+          <div class="label">
+            <span class="author">快哥网络</span>
+            <span class="praise">赞<i>300</i></span>
+            <span class="evaluate">评论<i>30</i></span>
+            <span>100次下载</span>
+            <span class="upTime">2018-01-20</span>
+          </div>
+        </div>
+        <div class="describe">
+          不知道学PHP有没有前途~哎越写越没劲
+           Class createdb    //类的开始
+           {
+           var $db= "localhost";//数据库地址;
+           var $dbname = "root";//用户名;
+           var $dbpwd = "";//密码;
+           var $dbtable = "mysql";//使用的数据库
+           var $conn;    //数据库连接;
+           var $result;    //结果集
+           var $mysql;    //执行的mysql
+           var $row;     //结果集中找数据
+           function createconn()   //这个类方法是开始一个conn连接,然后开始选择数据库
+           {
+            $this->conn = mysql_connect($this->db,$this->dbname,$this->dbpwd);
+             mysql_select_db($this->dbtable,$this->conn);
+           }
+           function getresule() //这个是得到一个结果集
+           {
+            $this->result = mysql_query($this->mysql,$this->conn);
+           }
+           function getrow() //创建一个向前的结果集指针
+           {
+            $this->row = mysql_fetch_array($this->result);
+            return $this->row;
+           }
+           function closedatabase()
+           {
+            mysql_close($this->conn);
+           }
+           }//类结束,开始调用类来读mysql数据库数据.
+          //调试数据库连接的代码!不需要的.
+          /* $bb = new createdb;  //类实例化
+           $bb->createconn();// 调用类的连接
+           $bb->mysql="select * from friends_conf";
+           $bb->getresule(); //调用类得到结果集
+           while($bb->getrow()){      //调用类创建指针向前读循环读数据,
+            echo($bb->row["confname"]);
+            echo($bb->row["confvalue"]);
+           }*/
+          /*
+          //输出
+             public function myde_write($id = 'page') {
+                 $str = "<div id=" . $id . ">";
+                 $str.=$this->myde_home();
+                 $str.=$this->myde_prev();
+                 if ($this->myde_i > 1) {
+                     $str.="<p class='pageEllipsis'>...</p>";
+                 }
+                 for ($i = $this->myde_i; $i <= $this->myde_en; $i++) {
+                     if ($i == $this->myde_page) {
+                         $str.="<a href='" . $this->page_replace($i) . "' title='第" . $i . "页' class='cur'>$i</a>";
+                     } else {
+                         $str.="<a href='" . $this->page_replace($i) . "' title='第" . $i . "页'>$i</a>";
+                     }
+                 }
+                 if ($this->myde_en < $this->myde_page_count) {
+                     $str.="<p class='pageEllipsis'>...</p>";
+                 }
+                 $str.=$this->myde_next();
+                 $str.=$this->myde_last();
+                 $str.="<p class='pageRemark'>共<b>" . $this->myde_page_count .
+                         "</b>页<b>" . $this->myde_total . "</b>条数据</p>";
+                 $str.="</div>";
+                 return $str;
+             }
+         }
+
+          */
+
+        </div>
+        <div class="download">
+          <span class="sub">下载</span>
+          <span class="praise">赞</span>
+          <span class="gratuity">打赏</span>
+          <div class="share">
+            <span class="gratuity">收藏</span>
+            <span class="gratuity">分享</span>
+          </div>
+        </div>
+        <div class="evaluate">
+          <div class="title">最新评论</div>
+          <div class="list">
+            <div class="author">
+              <span>快哥网络</span>
+              <span style="margin-left: 16px;">2018-01-20</span>
+            </div>
+            <div>
+              最常好用的类，谢谢分享。
+            </div>
+            <div class="attitude">
+              <span>支持(0)</span>
+              <span>反对(0)</span>
+            </div>
+          </div>
+          <div class="list">
+            <div class="author">
+              <span>快哥网络</span>
+              <span style="margin-left: 16px;">2018-01-20</span>
+            </div>
+            <div>
+              最常好用的类，谢谢分享。
+            </div>
+            <div class="attitude">
+              <span>支持(0)</span>
+              <span>反对(0)</span>
+            </div>
+          </div>
+          <div class="list">
+            <div class="author">
+              <span>快哥网络</span>
+              <span style="margin-left: 16px;">2018-01-20</span>
+            </div>
+            <div>
+              最常好用的类，谢谢分享。
+            </div>
+            <div class="attitude">
+              <span>支持(0)</span>
+              <span>反对(0)</span>
+            </div>
+          </div>
+          <div class="list">
+            <div class="author">
+              <span>快哥网络</span>
+              <span style="margin-left: 16px;">2018-01-20</span>
+            </div>
+            <div>
+              最常好用的类，谢谢分享。
+            </div>
+            <div class="attitude">
+              <span>支持(0)</span>
+              <span>反对(0)</span>
+            </div>
+          </div>
+          <div class="list">
+            <div class="author">
+              <span>快哥网络</span>
+              <span style="margin-left: 16px;">2018-01-20</span>
+            </div>
+            <div>
+              最常好用的类，谢谢分享。
+            </div>
+            <div class="attitude">
+              <span>支持(0)</span>
+              <span>反对(0)</span>
+            </div>
+          </div>
+          <div class="list">
+            <div class="author">
+              <span>快哥网络</span>
+              <span style="margin-left: 16px;">2018-01-20</span>
+            </div>
+            <div>
+              最常好用的类，谢谢分享。
+            </div>
+            <div class="attitude">
+              <span>支持(0)</span>
+              <span>反对(0)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="title">热门类</div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="content"><span>Copyright © 2018 快哥网络</span>   <span style="float: right;">意见反馈</span> </div>
+    </footer>
+  </body>
+</html>
