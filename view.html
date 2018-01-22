@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    <div class="" id="bg">
+
+    </div>
     <header>
       <div class="content">
         <div class="title">快哥网络</div>
@@ -15,8 +18,8 @@
           <input type="submit" class="sub"  value="搜索">
         </div>
         <div class="login">
-          <!-- <span id="login">登陆</span>
-          <span id="register">注册</span> -->
+          <span id="login">登陆</span>
+          <span id="register">注册</span>
           <span id="login">程福红</span>
           <span id="register"><a href="user.html" style="color:#fff;">用户中心</a></span>
         </div>
@@ -24,6 +27,7 @@
       </div>
     </header>
     <main>
+
       <div class="left">
         <div class="content">
           <div class="title">
@@ -281,14 +285,145 @@
           </div>
           <span class="zcls close" title="关闭窗体" id="">×</span>
         </div>
+        <!-- 注册 -->
+        <div class="m-layer" id="sign">
+          <div class="zbar" id="">
+            <div class="zttl f-thide">注册</div>
+          </div>
+          <div class="zcnt">
+            <div class="form-wrapper" id="sign_up" style="display: block;">
+  				<form id="vForm" name="vForm" action="/register/account.do" method="post">
+  				<input type="password" style="width:0;height:0;float:left;visibility:hidden;">
+  				<input type="hidden" name="forwardUrl" value="">
+  				<input type="hidden" name="sourceURL" value="http://bbs.tianya.cn/">
+  				<input type="hidden" name="preSourceURL" value="">
+  				<input type="hidden" name="_sid" id="__sid" value="0#1#1.0#938de77d-1574-4061-a615-ffbbe8674a40">
+  					<div class="form-item">
+  						<label class="form-label" for="userName">用户名:</label>
+  						<div class="form-field">
+  							<input type="text" placeholder="请输入用户名" class="form-text" name="userName" id="userName" value=""><input type="hidden" id="user_action" name="action" value="b9.1.1494|bc1fb4f8aa0f733f8f3797f0a8200343|d41d8cd98f00b204e9800998ecf8427e|Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36|0|10|v2.2">
+  							<span id="userName_tips" class="form-tips tips-error">请输入用户名</span>
+  							<!-- <span id="userName_tips" class="form-tips tips-error">该用户名已被使用，请使用其他用户名注册</span> -->
+  						</div>
+  					</div>
+  					<div class="form-item">
+                      	<label class="form-label" for="password">密码:</label>
+                      	<div class="form-field">
+                      		<input type="password" placeholder="请输入密码" class="form-text" name="password" id="password">
+                      		<span id="password_tips" class="form-tips tips-error">请输入密码</span>
+                      	</div>
+                      </div>
+                      <div class="form-item">
+  						<label class="form-label" for="mobile">手机号:</label>
+  						<div class="form-field">
+  							<div class="mobile-text">
+
+  								<input type="text" class="form-text" name="mobile" id="mobile" value="">
+  								<input type="hidden" name="countryCode" id="area_code" value="">
+  								<input type="hidden" name="token" id="token" value="">
+  							</div>
+  							<span id="mobile_tips" class="form-tips tips-error">请输入手机号码</span>
+  						</div>
+  					</div>
+  					<div id="mobile_vcode_item" class="form-item">
+  						<label class="form-label" for="mobileVcode">验证码:</label>
+  						<div class="form-field">
+  							<div class="mobile-vcode-text">
+  								<input type="text" class="form-text" name="smsCode" id="mobileVcode" value="">
+  								<a id="get_mobile_vcode" class="get-mobile-vcode" href="javascript:void(0);">获取手机验证码<!-- 重新发送(60) --></a>
+  							</div>
+  							<span id="mobileVcode_tips" class="form-tips tips-error">请输入验证码</span>
+  						</div>
+  					</div>
+              <div class="form-item" id="guize" style="margin-top:-20px;">
+                      	<div class="form-field">
+                          	<label>
+                          		<input type="checkbox" checked="checked" value="1" class="form-checkbox" name="agree" id="agree">
+                          		<span style="color: #333;">我已经阅读并同意<a target="_blank" href="http://service.tianya.cn/guize/regist.do">《快哥网络用户注册协议》</a></span>
+                          	</label>
+                          </div>
+              </div>
+              <!-- <div class="form-action">
+                      	<button type="button" id="register_btn" class="register-btn btn btn-blue">立即注册</button>
+              </div> -->
+              <div id="mobile_vcode_item" class="form-item"  style="margin-top:-20px;">
+    						<label class="form-label" for="mobileVcode"></label>
+    						<div class="form-field">
+    							<button type="button" id="register_btn" class="register-btn btn btn-blue" style="width:277px">立即注册</button>
+    						</div>
+    					</div>
+  				</form>
+  			 </div>
+            </div>
+            <span class="zcls close" title="关闭窗体" id="">×</span>
+          </div>
+        <script src="js/jquery.min.js" charset="utf-8"></script>
+        <!-- 登陆 -->
+        <div class="m-layer" id="userLogin">
+          <div class="zbar" id="">
+            <div class="zttl f-thide">登陆</div>
+          </div>
+          <div class="zcnt">
+            <div class="form-wrapper" id="sign_up" style="display: block;">
+  				<form id="vForm" name="vForm" action="/register/account.do" method="post">
+  				<input type="password" style="width:0;height:0;float:left;visibility:hidden;">
+  				<input type="hidden" name="forwardUrl" value="">
+  				<input type="hidden" name="sourceURL" value="http://bbs.tianya.cn/">
+  				<input type="hidden" name="preSourceURL" value="">
+  				<input type="hidden" name="_sid" id="__sid" value="0#1#1.0#938de77d-1574-4061-a615-ffbbe8674a40">
+  					<div class="form-item">
+  						<label class="form-label" for="userName">用户名:</label>
+  						<div class="form-field">
+  							<input type="text" placeholder="请输入用户名" class="form-text" name="userName" id="userName" value=""><input type="hidden" id="user_action" name="action" value="b9.1.1494|bc1fb4f8aa0f733f8f3797f0a8200343|d41d8cd98f00b204e9800998ecf8427e|Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36|0|10|v2.2">
+  							<span id="userName_tips" class="form-tips tips-error">请输入用户名</span>
+  							<!-- <span id="userName_tips" class="form-tips tips-error">该用户名已被使用，请使用其他用户名注册</span> -->
+  						</div>
+  					</div>
+  					<div class="form-item">
+                      	<label class="form-label" for="password">密码:</label>
+                      	<div class="form-field">
+                      		<input type="password" placeholder="请输入密码" class="form-text" name="password" id="password">
+                      		<span id="password_tips" class="form-tips tips-error">请输入密码</span>
+                      	</div>
+            </div>
+              <div class="form-item">
+                        <label class="form-label" for="userName"></label>
+                        <div class="form-field">
+                          <label><input type="checkbox" class="input-checkbox" id="rmflag" name="rmflag" value="1" checked="checked"><a>下次自动登录</a>
+                                   <a class="jump-passport" href="http://passport.tianya.cn/fp/fp.jsp" target="_blank" tabindex="4" style="color:red;margin-left:130px">忘记密码</a>
+                               </label>
+                          </div>
+              </div>
+              <div id="mobile_vcode_item" class="form-item"  style="margin-top:-20px;">
+    						<label class="form-label" for="mobileVcode"></label>
+    						<div class="form-field">
+    							<button type="button" id="register_btn" class="register-btn btn btn-blue" style="width:277px">立即注册</button>
+    						</div>
+    					</div>
+  				</form>
+  			 </div>
+            </div>
+            <span class="zcls close" title="关闭窗体" id="">×</span>
+          </div>
         <script src="js/jquery.min.js" charset="utf-8"></script>
         <script type="text/javascript">
           $("#feedback").click(function(event) {
             $("#feedbackView").css("display","block");
+              $("#bg").css("display","block");
+          });
+          $("#login").click(function(event) {
+            $("#userLogin").css("display","block");
+            $("#bg").css("display","block");
+          });
+          $("#register").click(function(event) {
+            $("#sign").css("display","block");
+            $("#bg").css("display","block");
           });
           $(".close").click(function(event) {
             $(".m-layer").css("display","none");
+            $("#bg").css("display","none");
           });
+
         </script>
     </footer>
   </body>
