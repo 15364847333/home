@@ -5,6 +5,34 @@
     <title>用户中心_PHP类库</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <style media="screen">
+      #listSelect{
+        color: #fff;
+      background: rgba(240,20,20,.8);
+      border-radius: 8px 0 0 8px;
+      position: relative;
+    display: block;
+    width:100px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 48px;
+    /* color: #787d82; */
+    padding-left: 34px;
+    text-align: left;
+      }
+      #listSelect:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #fff;
+    border-bottom: 20px solid #fff;
+    border-left: 15px solid transparent;
+}
+    </style>
   </head>
   <body>
     <header>
@@ -26,13 +54,13 @@
     <main>
       <div class="user_left">
         <div class="list">
-          <span>基本信息</span>
+            <span >基本信息</span>
         </div>
         <div class="list">
           <span>我的代码</span>
         </div>
         <div class="list">
-          <span>打赏收入</span>
+          <span id="listSelect">打赏收入</span>
         </div>
         <div class="list">
           <span>下载记录</span>
@@ -139,3 +167,10 @@
     </footer>
   </body>
 </html>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $('.list').click(function(){
+    $(this).find('span').attr('id','listSelect');
+    $(this).siblings().find('span').attr('id','');
+  })
+</script>
