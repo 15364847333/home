@@ -5,10 +5,10 @@
     <title>评情页_PHP类库</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="js/jquery.min.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="" id="bg">
-
     </div>
     <header>
       <div class="content">
@@ -34,11 +34,13 @@
             <div class="text">php分页类</div>
           </div>
           <div class="label">
-            <span class="author">快哥网络</span>
-            <span class="praise">赞<i>300</i></span>
-            <span class="evaluate">评论<i>30</i></span>
-            <span>100次下载</span>
-            <span class="upTime">2018-01-20</span>
+            <span ><img src="image/person.jpg" style="overflow: hidden;width: 24px;height: 24px;margin-right: 5px;
+              border-radius: 12px;line-height:24px;vertical-align:middle;cursor:pointer"></span>
+            <span class="author" style="color: #3db158;cursor:pointer;vertical-align:middle;">快哥网络</span>
+            <span class="praise" style="vertical-align:middle;">赞<i>300</i></span>
+            <span class="evaluate" style="vertical-align:middle;">评论<i>30</i></span>
+            <span style="vertical-align:middle;">100次下载</span>
+            <span class="upTime" style="vertical-align:middle;">2018-01-20</span>
           </div>
         </div>
         <div class="describe">
@@ -123,7 +125,7 @@
           </div>
         </div>
         <div class="evaluate">
-          <div class="title">最新评论</div>
+          <div class="title" style="font-size:18px;">最新评论&nbsp(6)</div>
           <div class="list">
             <div class="author">
               <span>快哥网络</span>
@@ -251,6 +253,41 @@
           <span class="downCount">100次下载</span>
         </div>
 
+      </div>
+      <div class="right">
+        <div class="title">最近浏览</div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
+        <div class="list">
+          <span>php分页类</span>
+          <span class="downCount">100次下载</span>
+        </div>
       </div>
     </main>
     <footer>
@@ -405,6 +442,123 @@
             </div>
             <span class="zcls close" title="关闭窗体" id="">×</span>
           </div>
+          <!-- 收藏提示 -->
+          <div class="collection">
+              <div class="tooltips" id="error_tip" style="display: block;">用户尚未登录，点击
+                <a href="javascript:void(0);" target="_blank" id="collectionLogin">这里</a>登录
+              </div>
+          </div>
+          <!-- 发布 -->
+          <div class="m-layer" id="mySubmit" style="display:none">
+            <div class="zbar" id="">
+              <div class="zttl f-thide">发布</div>
+            </div>
+            <div class="zcnt">
+              <div class="lyct f-cb">
+                <div class="m-fdback">
+                  <div class="tip">和大家一起分享</div>
+                  <div class="u-txtwrap f-pr">
+                    <textarea class="u-txt area" placeholder="请输入..." id=""></textarea>
+                    <span class="zs s-fc2" style="display: none;">0/140</span>
+                  </div>
+
+                  <div style="display:none" class="u-err" id="">
+                    <i class="u-icn u-icn-25"></i>内容不能为空！</div>
+                  </div>
+                  <div class="lybtn f-tc">
+                    <a href="javascript:;" class="btn2"  id="">
+                      <i>提交</i>
+                    </a>
+                    <a href="javascript:;" class="btn2 btnh btnm close"  id="">
+                      <i>取 消</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <span class="zcls close" title="关闭窗体" id="">×</span>
+            </div>
+            <!-- 打赏 -->
+
+   <div class="reward-popups" data-popups-for="reward" style="display: none;" id="reward">
+   <span data-popups-close="true" id="rewardClose">×</span>
+   <div data-popups="body">
+       <form action="" method="post" id="blog_donate_form">
+           <div class="form-wapper">
+               <div class="blogger-info text-center">
+                  <!--  <span class="icon">
+                       <a href="https://my.oschina.net/didispace/home" class="article_editor_head_img" target="_blank"><img src="https://static.oschina.net/uploads/user/1326/2653610_100.jpg?t=1456537598000" align="absmiddle" alt="程序猿DD" title="程序猿DD" class="LargePortrait"></a>
+                   </span> -->
+                   <div class="text">
+                       如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！
+                   </div>
+               </div>
+               <div class="form-item">
+                   <div class="form-label">
+                       <span class="font-red">*</span>
+                       金额(元)
+                   </div>
+                   <div class="form-ctrl">
+                       <div>
+                           <input name="payMoney" value="2" type="text" placeholder="请输入金额￥">
+                           <input name="money" value="2" type="hidden" placeholder="请输入金额￥">
+                       </div>
+                       <div class="reward-money-box">
+                           <span data-value="1" class="reward-money">￥1</span>
+                           <span data-value="5" class="reward-money">￥5</span>
+                           <span data-value="10" class="reward-money">￥10</span>
+                           <span data-value="20" class="reward-money">￥20</span>
+                           <span data-value="" class="reward-money other-money active">其他金额</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="form-item">
+                   <div class="form-label">
+                       打赏人
+                   </div>
+                   <div class="form-ctrl">
+                       <input type="text" name="donaterName"  value="" placeholder="请输入姓名/昵称/邮箱">
+                   </div>
+               </div>
+               <div class="form-item items-center">
+                   <div class="form-label">
+                       留言
+                   </div>
+                   <div class="form-ctrl">
+                       <textarea style="width: 450px;height: 100px;" name="message" id="" cols="30" rows="3" placeholder="你想对TA说"></textarea>
+                   </div>
+               </div>
+
+               <div class="form-item items-center">
+                   <div class="form-label">
+                       <span class="font-red">*</span>
+                       支付类型
+                   </div>
+                   <div class="form-ctrl">
+                       <div class="reward-way form-radios reward-alipay">
+                           <input type="radio" value="alipay" id="rewardAliPay" checked="checked" name="reward-way" >
+                           <label for="rewardAliPay" >
+                               <span class="hide" ><img src="image/zfb.png" style="width: 30px;vertical-align: middle;" alt="placeholder+image"></span>
+                           </label>
+                       </div>
+                       <div class="reward-way form-radios reward-wechat">
+                           <input type="radio" value="wepay" id="rewardWechat" name="reward-way">
+                           <label for="rewardWechat">
+                               <i class="icon-svg icon-wechat"></i>
+                               <span class="hide" ><img src="image/wx.png" style="width: 30px;vertical-align: middle;" alt="placeholder+image"></span>
+                           </label>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="form-button text-right">
+                   <input type="button" class="btn btn-orange" value="打赏" id="blog_donate_button">
+               </div>
+           </div>
+
+
+       </form>
+   </div>
+</div>
         <script src="js/jquery.min.js" charset="utf-8"></script>
         <script type="text/javascript">
           $("#feedback").click(function(event) {
@@ -423,7 +577,32 @@
             $(".m-layer").css("display","none");
             $("#bg").css("display","none");
           });
-
+          //收藏点击
+          $('.gratuity').click(function(event){
+            $(".collection").css("display","block");
+            var s =$(".collection");
+             setTimeout(function(){s.fadeOut()},2000);
+          })
+          //收藏登陆
+          $("#collectionLogin").click(function(event) {
+            $("#userLogin").css("display","block");
+            $("#bg").css("display","block");
+          });
+          // 发布点击
+          $(".release").click(function(event) {
+            $("#mySubmit").css("display","block");
+            $("#bg").css("display","block");
+          });
+          //打赏
+          $(".gratuity").click(function(event) {
+            $("#reward").css("display","block");
+            $("#bg").css("display","block");
+          });
+          //打赏关闭
+          $("#rewardClose").click(function(event) {
+            $("#reward").css("display","none");
+            $("#bg").css("display","none");
+          });
         </script>
     </footer>
   </body>

@@ -656,3 +656,179 @@ div.m-layer .lybtn {
   background-color: black;
 
 }
+/* 未登录收藏 */
+.collection{
+    top: 30%;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+      z-index: 22;
+      display: none;
+}
+.collection .tooltips {
+    background-color: rgba(0,0,0,.6);
+    border-radius: 3px;
+    color: #fff;
+    margin: auto;
+    padding: 12px 30px;
+    /* display: none; */
+    font-size: 16px;
+
+}
+.collection  .tooltips a {
+    color: #F8E71C;
+}
+/* 打赏 */
+.reward-popups {
+ position: fixed;
+ z-index: 999;
+ top: 50%;
+ left: 50%;
+ display: none;
+ width: 800px;
+ max-width: 800px;
+ padding: 25px;
+ -webkit-transform: translateX(-50%) translateY(-50%);
+ transform: translateX(-50%) translateY(-50%);
+ border-radius: 5px;
+ background-color: #fafafa;
+ -webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.11), 0 24px 24px 0 rgba(0,0,0,.15);
+ box-shadow: 0 0 24px 0 rgba(0,0,0,.11), 0 24px 24px 0 rgba(0,0,0,.15);
+}
+.reward-popups  [data-popups-close] {
+   font-family: sans-serif;
+   font-size: 20px;
+   font-weight: lighter;
+   line-height: 20px;
+   position: absolute;
+   top: 8px;
+   right: 8px;
+   overflow: hidden;
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+   text-align: center;
+   color: #ccc;
+}
+.reward-popups [data-popups=body] {
+   margin: 5px 10px 5px 0;
+}
+.reward-popups  .form-wapper {
+   color: #333;
+   width: 800px;
+   height: 535px;
+   /* overflow: hidden; */
+   box-sizing: border-box;
+}
+.reward-popups  .text-center {
+   text-align: center;
+}
+.reward-popups .blogger-info .text {
+   margin-top: 15px;
+   margin-bottom: 40px;
+}
+.reward-popups  .form-wapper .form-item {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   min-height: 40px;
+   margin-bottom: 10px;
+}
+.reward-popups .form-label {
+   width: 260px;
+}
+.reward-popups  .form-wapper .form-label {
+   line-height: 40px;
+   padding-right: 20px;
+   text-align: right;
+}
+.reward-popups  .font-red, .font-red a {
+   color: red;
+}
+.reward-popups .reward-popups input[type=text], .reward-popups input[type=number], .reward-popups input[type=tel] {
+   line-height: 40px;
+   /*width: 100%;*/
+   width: 450px;
+   height: 35px;
+   padding-top: 0;
+   padding-bottom: 0;
+}
+.reward-popups, .reward-popups input, .reward-popups select, .reward-popups textarea {
+   font-size: 16px;
+}
+.reward-popups .form-wapper {
+   color: #333;
+}
+.reward-popups .reward-money-box .reward-money {
+   line-height: 35px;
+   display: inline-block;
+   float: left;
+   width: 80px;
+   height: 34px;
+   margin: 17px 6px 0 0;
+   cursor: pointer;
+   text-align: center;
+   color: #fff;
+   background: #d4d4d4;
+}
+.reward-popups .reward-money-box .reward-money.active {
+   background: #626262;
+}
+.reward-popups .form-item:not(:last-of-type) {
+   margin-bottom: 22px;
+}
+/* .reward-popups .form-label {
+   width: 100px;
+} */
+.reward-popups .form-wapper .form-label {
+   line-height: 40px;
+   padding-right: 20px;
+   text-align: right;
+}
+.reward-popups .font-red, .font-red a {
+   color: red;
+}
+.reward-popups .reward-way {
+   float: left;
+   margin-right: 25px;
+}
+.reward-popups .form-radios input[type=radio]+label:before {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   display: inline-block;
+   width: 17px;
+   height: 17px;
+   content: '';
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+   border-radius: 50%;
+}
+.reward-popups .reward-alipay label {
+   background: url(../imgs/icons/alipay.png) 25px no-repeat;
+   background-size: contain;
+   width: 122px;
+   height: 32px;
+}
+.reward-popups .btn-orange[class*=btn] {
+   background-color: #f5a623;
+}
+.reward-popups .btn {
+   width: 100px;
+   height: 40px;
+}
+.reward-popups .btn {
+   border-radius: 3px;
+   padding: .4rem .8rem;
+   outline: 0;
+   border: 0;
+   margin: 0;
+   background-color: transparent;
+   display: inline-block;
+   cursor: pointer;
+   float: right;
+}
+.reward-popups .btn, .btn a {
+   color: #fff;
+}
