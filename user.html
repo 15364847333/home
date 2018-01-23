@@ -32,6 +32,52 @@
     border-bottom: 20px solid #fff;
     border-left: 15px solid transparent;
 }
+/* 个人信息 */
+.common-title {
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+      color: #14191e;
+}
+.common-title a {
+    color: #93999f;
+    font-weight: 400;
+    font-size: 14px;
+}
+.pull-right {
+    float: right;
+}
+.setting-profile .info-wapper {
+    margin: 24px auto 24px 40px;
+}
+.line {
+    height: 1px;
+    background-color: #d0d6d9;
+    margin-top: 12px;
+}
+.info-box {
+    margin-bottom: 12px;
+}
+label.pull-left {
+    width: 120px;
+    line-height: 20px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f3f5f7;
+    color: #07111b;
+    font-weight: 700;
+    display: block;
+    float: left;
+}
+div.pull-left{
+    width: 462px;
+    height: 100%;
+    color: #14191e;
+    margin-left: 138px;
+    line-height: 20px;
+    padding: 20px 0 20px 22px;
+    border-bottom: 1px solid #d9dde1;
+}
     </style>
   </head>
   <body>
@@ -53,14 +99,14 @@
     </header>
     <main>
       <div class="user_left">
-        <div class="list">
+        <div class="list" id="myInformation">
             <span >基本信息</span>
         </div>
         <div class="list">
           <span>我的代码</span>
         </div>
         <div class="list">
-          <span id="listSelect">打赏收入</span>
+          <span >打赏收入</span>
         </div>
         <div class="list">
           <span>下载记录</span>
@@ -69,7 +115,7 @@
           <span>我的收藏</span>
         </div>
         <div class="list">
-          <span>我的评论</span>
+          <span id="listSelect">我的评论</span>
         </div>
         <div class="list">
           <span>打赏记录</span>
@@ -79,7 +125,37 @@
         </div>
       </div>
       <div class="user_right">
-        <div class="evaluate">
+        <!-- 基本信息 -->
+        <div id="information" class="rightDiv" style="display:none">
+          <div class="common-title">
+              基本信息
+              <a href="javascript: void(0);" class="pull-right js-edit-info"><i class="icon-note"></i>编辑</a>
+          </div>
+          <div class="line"></div>
+          <div class="info-wapper">
+              <div class="info-box clearfix">
+                  <label class="pull-left">昵称</label><div class="pull-left">qq_少年派_0</div>
+              </div>
+              <div class="info-box clearfix">
+                  <label class="pull-left">职位</label><div class="pull-left">未设置</div>
+              </div>
+              <div class="info-box clearfix">
+                  <label class="pull-left">城市</label>
+                  <div class="pull-left">
+                                  未设置
+                                  </div>
+              </div>
+              <div class="info-box clearfix">
+                  <label class="pull-left">性别</label><div class="pull-left">
+                  男</div>
+              </div>
+              <div class="info-box clearfix">
+                  <label class="pull-left">个性签名</label><div class="pull-left">未设置</div>
+              </div>
+          </div>
+        </div>
+        <!-- 评论 -->
+        <div class="evaluate rightDiv">
           <div class="title">我的评论</div>
           <div class="list">
             <div class="author">
@@ -160,7 +236,9 @@
             </div>
           </div>
         </div>
+
       </div>
+
     </main>
     <footer>
       <div class="content"><span>Copyright © 2018 快哥网络</span>   <span style="float: right;">意见反馈</span> </div>
@@ -173,5 +251,10 @@
   $('.user_left >.list').click(function(){
     $(this).find('span').attr('id','listSelect');
     $(this).siblings().find('span').attr('id','');
+  })
+  //侧边栏点击对应内容显示
+  $('.user_left >.list').click(function(){
+    $('.user_right').find('.rightDiv').css('display','none');
+    $('.user_right').find('.rightDiv').eq($(this).index()).css('display','block');
   })
 </script>
