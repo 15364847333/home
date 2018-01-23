@@ -118,7 +118,7 @@
         <div class="download">
           <span class="sub">下载</span>
           <span class="praise">赞</span>
-          <span class="gratuity">打赏</span>
+          <span class="gratuity" id="goReward">打赏</span>
           <div class="share">
             <span class="gratuity">收藏</span>
             <span class="gratuity">分享</span>
@@ -594,7 +594,7 @@
             $("#bg").css("display","block");
           });
           //打赏
-          $(".gratuity").click(function(event) {
+          $("#goReward").click(function(event) {
             $("#reward").css("display","block");
             $("#bg").css("display","block");
           });
