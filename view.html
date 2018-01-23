@@ -116,12 +116,12 @@
 
         </div>
         <div class="download">
-          <span class="sub">下载</span>
-          <span class="praise">赞</span>
+          <span class="sub befColl" >下载</span>
+          <span class="praise befColl" >赞</span>
           <span class="gratuity" id="goReward">打赏</span>
           <div class="share">
-            <span class="gratuity">收藏</span>
-            <span class="gratuity">分享</span>
+            <span class="gratuity befColl" >收藏</span>
+            <span class="gratuity befColl" >分享</span>
           </div>
         </div>
         <div class="evaluate">
@@ -578,7 +578,7 @@
             $("#bg").css("display","none");
           });
           //收藏点击
-          $('.gratuity').click(function(event){
+          $('.befColl').click(function(event){
             $(".collection").css("display","block");
             var s =$(".collection");
              setTimeout(function(){s.fadeOut()},2000);
