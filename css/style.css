@@ -421,9 +421,6 @@ div.m-layer .lybtn {
 		.content-login {
     		text-align: center;
 		}
-		body, button, input, select, textarea {
-		    font: 12px/20px "微软雅黑",Arial;
-		}
 		.form-item .form-label {
 		    font-size: 18px;
 		    color: #333;
@@ -538,9 +535,6 @@ div.m-layer .lybtn {
     		}
     		.content-login {
         		text-align: center;
-    		}
-    		body, button, input, select, textarea {
-    		    font: 12px/20px "微软雅黑",Arial;
     		}
     		.form-item .form-label {
     		    font-size: 18px;
