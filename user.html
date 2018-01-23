@@ -15,7 +15,7 @@
     width:100px;
     height: 40px;
     font-size: 16px;
-    line-height: 48px;
+    line-height: 40px;
     /* color: #787d82; */
     padding-left: 34px;
     text-align: left;
@@ -169,7 +169,8 @@
 </html>
 <script src="js/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript">
-  $('.list').click(function(){
+//侧边栏点击
+  $('.user_left >.list').click(function(){
     $(this).find('span').attr('id','listSelect');
     $(this).siblings().find('span').attr('id','');
   })
